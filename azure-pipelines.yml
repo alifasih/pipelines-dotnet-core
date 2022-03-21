@@ -12,6 +12,10 @@ pool:
 variables:
   buildConfiguration: 'Release'
 
+
 steps:
+- script: echo 'Welcome to azure pipelines'
+  displayName: 'pre build step'
+
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
