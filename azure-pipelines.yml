@@ -5,17 +5,21 @@
 
 trigger:
 - master
+strategy:
+  matrix:
+    netcore_debug:
+      buildConfiguration: "Debug"
+    netcore_release:
+      buildConfiguration: "Release"
+  maxParallel: 2
 
 pool:
   name: Default
 
-variables:
-  buildConfiguration: 'Release'
+# variables:
+#   buildConfiguration: 'Release'
 
 
 steps:
-- script: echo 'Welcome to azure pipelines'
-  displayName: 'pre build step'
-
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
