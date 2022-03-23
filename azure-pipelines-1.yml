@@ -1,0 +1,12 @@
+trigger: 
+- relase
+
+stages:
+  - stage: Build Stage
+    jobs:
+      - job: build
+        pool: 
+         name: default
+        steps:
+          - script: "echo hellow world"
+            displayName: Hello world
