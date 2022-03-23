@@ -2,7 +2,7 @@ trigger:
 - relase
 
 stages:
-  - stage: build-stage
+  - stage: build_stage
     displayName: Build Stage
     jobs:
       - job: build
