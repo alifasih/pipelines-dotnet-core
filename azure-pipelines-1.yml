@@ -1,5 +1,8 @@
 trigger: 
-- relase
+  batch: true
+  branches:
+    include:
+      - master
 
 stages:
   - stage: build_stage
